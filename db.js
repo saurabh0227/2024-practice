@@ -1,12 +1,12 @@
 const inputArray = [1, 2, 3, [4, 5], [6, [7, [8, [9, 10, [11, 12]]]]]]; //output [1,2,3,4,5,6,7,8]
 
-// function flatArray(arr) {
-//   return arr.reduce(
-//     (acc, val) =>
-//       Array.isArray(val) ? acc.concat(flatArray(val)) : acc.concat(val),
-//     []
-//   );
-// }
+function flatArray(arr) {
+  return arr.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flatArray(val)) : acc.concat(val),
+    []
+  );
+}
 
 const flatArray = (arr) => {
   const resultArr = [];
